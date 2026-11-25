@@ -1,0 +1,99 @@
+-------------------------------------------------------------------------------
+Test set: ua.kpi.tzyapz.finkit.AccountLedgerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 0.142 s <<< FAILURE! -- in ua.kpi.tzyapz.finkit.AccountLedgerTest
+ua.kpi.tzyapz.finkit.AccountLedgerTest.withdrawFullBalanceLeavesZero -- Time elapsed: 0.040 s <<< ERROR!
+java.lang.IllegalStateException: Овердрафт заборонено: недостатньо коштів
+	at ua.kpi.tzyapz.finkit.AccountLedger.withdraw(AccountLedger.java:40)
+	at ua.kpi.tzyapz.finkit.AccountLedgerTest.withdrawFullBalanceLeavesZero(AccountLedgerTest.java:50)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+
+ua.kpi.tzyapz.finkit.AccountLedgerTest.historyPreservesExecutionOrderAndBalances -- Time elapsed: 0.007 s <<< FAILURE!
+org.opentest4j.MultipleFailuresError: 
+Перевірка послідовності записів історії (4 failures)
+	org.opentest4j.AssertionFailedError: expected: <DEPOSIT> but was: <WITHDRAWAL>
+	org.opentest4j.AssertionFailedError: expected: <500.00> but was: <379.50>
+	org.opentest4j.AssertionFailedError: expected: <WITHDRAWAL> but was: <DEPOSIT>
+	org.opentest4j.AssertionFailedError: expected: <379.50> but was: <500.00>
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:80)
+	at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:44)
+	at org.junit.jupiter.api.Assertions.assertAll(Assertions.java:2961)
+	at ua.kpi.tzyapz.finkit.AccountLedgerTest.historyPreservesExecutionOrderAndBalances(AccountLedgerTest.java:74)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <DEPOSIT> but was: <WITHDRAWAL>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+		at ua.kpi.tzyapz.finkit.AccountLedgerTest.lambda$historyPreservesExecutionOrderAndBalances$1(AccountLedgerTest.java:76)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+		at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 6 more
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <500.00> but was: <379.50>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+		at ua.kpi.tzyapz.finkit.AccountLedgerTest.lambda$historyPreservesExecutionOrderAndBalances$2(AccountLedgerTest.java:77)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+		at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 6 more
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <WITHDRAWAL> but was: <DEPOSIT>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+		at ua.kpi.tzyapz.finkit.AccountLedgerTest.lambda$historyPreservesExecutionOrderAndBalances$3(AccountLedgerTest.java:78)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+		at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 6 more
+	Suppressed: org.opentest4j.AssertionFailedError: expected: <379.50> but was: <500.00>
+		at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+		at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+		at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+		at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+		at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+		at ua.kpi.tzyapz.finkit.AccountLedgerTest.lambda$historyPreservesExecutionOrderAndBalances$4(AccountLedgerTest.java:79)
+		at org.junit.jupiter.api.AssertAll.lambda$assertAll$0(AssertAll.java:68)
+		at java.base/java.util.stream.ReferencePipeline$3$1.accept(Unknown Source)
+		at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.copyInto(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
+		at java.base/java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
+		at java.base/java.util.stream.AbstractPipeline.evaluate(Unknown Source)
+		at java.base/java.util.stream.ReferencePipeline.collect(Unknown Source)
+		at org.junit.jupiter.api.AssertAll.assertAll(AssertAll.java:77)
+		... 6 more
+
