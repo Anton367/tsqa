@@ -62,6 +62,8 @@ class LoanCalculatorTest {
                 new BigDecimal(principal), new BigDecimal(rate), months));
     }
 
+    // BL-30 — Issue #2
+
     @ParameterizedTest
     @ValueSource(ints = {3, 60})
     @DisplayName("BL-30: строки 3 і 60 місяців допустимі")
