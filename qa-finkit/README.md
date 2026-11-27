@@ -91,9 +91,11 @@ tsqa/
 │       ├── ui-scenarios.md
 │       ├── surefire-summary.md
 │       └── retro-sprint4.md
+|       |__ evidence/
+|           |__ surefire-reports
 ├── selenium-ide/
 │   ├── finkit.side
-│   └── export/                 # Java-експорт із Selenium IDE; чернетка
+│   └── FinkitldeExport.java               
 └── src/
     ├── main/java/ua/kpi/tzyapz/finkit/
     │   ├── LoanCalculator.java
@@ -106,12 +108,13 @@ tsqa/
         ├── TransferValidatorTest.java
         ├── AccountLedgerTest.java
         └── ui/
-            ├── SecurityUiTest.java
-            ├── RecoveryFormTest.java
-            ├── NavigationTest.java
-            ├── LoginTest.java
             ├── AccountsTest.java
+            ├── ForgotInfoTest.java
+            ├── LoginTest.java
+            ├── NavigationTest.java
+            ├── OpenNewAccountTest.java
             └── OpenAccountFormTest.java
+            |__ SecurityUiTest.java
 ```
 
 Java-експорт із `selenium-ide/export/` зберігається як допоміжна чернетка та **не підключається автоматично** до Maven-збірки.
